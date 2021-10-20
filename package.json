@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "gh-pages -d dist/agica"
+    "deploy": "ng build && gh-pages -d dist/agica"
   },
   "private": true,
   "dependencies": {
