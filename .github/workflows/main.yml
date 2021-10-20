@@ -23,9 +23,12 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: "Install Dependencies"
         run: yarn
+      - name: Add CNAME
+        run: echo 'agiica.com' > ./dist/agica/CNAME
       - name: "Github Pages Deployment"
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          echo 'agiica.com' > ./dist/agica/CNAME
           yarn deploy -u "github-actions-bot <support+actions@github.com>"
         if: ${{ github.ref == 'refs/heads/main' }} # only deploy master
         env:
