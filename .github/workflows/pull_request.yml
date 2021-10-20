@@ -1,7 +1,7 @@
 name: "Deployment"
 # the event that will trigger the action
-on: push
-
+on:
+  pull_request
 # what the action will do
 jobs:
   test:
