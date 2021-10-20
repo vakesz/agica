@@ -11,6 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CalendarComponent } from './calendar/calendar.component';
 
+declare let $: any;
+
 @NgModule({
   declarations: [
     AppComponent,
