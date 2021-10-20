@@ -9,7 +9,7 @@
     "predeploy": "npm run build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "gh-pages -d dist/agica"
+    "deploy": "echo 'agiica.com' > ./dist/agica/CNAME && gh-pages -d dist/agica"
   },
   "private": true,
   "dependencies": {
