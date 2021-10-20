@@ -6,9 +6,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "predeploy": "npm run build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build && gh-pages -d dist/agica"
+    "deploy": "gh-pages -d dist/agica"
   },
   "private": true,
   "dependencies": {
