@@ -1,4 +1,4 @@
-name: "Deployment"
+name: "Test on PR Open"
 # the event that will trigger the action
 on:
   pull_request

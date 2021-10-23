@@ -1,4 +1,4 @@
-name: "Deployment"
+name: "Deployment on Push"
 # the event that will trigger the action
 on: push
 
