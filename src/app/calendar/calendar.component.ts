@@ -38,11 +38,12 @@ export class CalendarComponent implements OnInit {
         }).then(function (response: { result: { items: any[]; }; }) {
             if (response.result.items) {
                 var calendarRows = [];
+                moment.locale('hu');
                 console.log(response.result.items);
                 response.result.items.forEach(function(entry) {
                     var startsAt = moment(entry.start.dateTime).format("YYYY MMMM DD.") + ' ' + moment(entry.start.dateTime).format("HH:mm");
                     var endsAt = moment(entry.end.dateTime).format("HH:mm");
-                    calendarRows.push(`<div class="box"><article class="media"><div class="media-left"><figure class="image is-64x64">`);
+                    calendarRows.push(`<div class="hero is-info is-bold" style="max-height: 50px;"><div class="container has-text-centered"><h3 class="subtitle">Esemény</h3></div></div><div class="box"><article class="media"><div class="media-left"><figure class="image is-64x64">`);
                     if (entry.location == "PUBG") calendarRows.push(`<img src="assets/img/pubg.webp" alt="Image">`);
                     if (entry.location == "R6") calendarRows.push(`<img src="assets/img/r6.webp" alt="Image">`);
                     if (entry.location == "VALORANT") calendarRows.push(`<img src="assets/img/valorant.webp" alt="Image">`);

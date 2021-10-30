@@ -1,4 +1,4 @@
-name: "Deployment"
+name: "Test on PR Open"
 # the event that will trigger the action
 on:
   pull_request
@@ -21,7 +21,5 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - name: "Install Dependencies"
+      - name: "Install Dependencies & Test"
         run: yarn
-      - name: "Github Pages Deployment"
-        run: npm run build

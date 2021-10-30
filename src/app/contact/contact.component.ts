@@ -16,6 +16,6 @@ export class ContactComponent implements OnInit {
   }
 
   submitForm() {
-    alert('Jebaited!');
+    alert('Hopp!');
   }
 }
