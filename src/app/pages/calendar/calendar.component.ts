@@ -17,7 +17,7 @@ export class CalendarComponent implements OnInit {
   ngOnInit(): void {  {
 
     var calendarId = 'bgudccobvjdigft93bk4njsvt0@group.calendar.google.com'; // TO BE CHANGED
-    var apiKey = 'AIzaSyCU-1fH-6AFoDLS4CpUf25NS_-EO_MqmEQ';
+    var apiKey = 'AIzaSyDuRhkMY97JWGzRqXnd6rHVt2x71GWCJuY';
     var userTimeZone = "Europe/Budapest";
 
     gapi.load('client:auth2', initClient);
