@@ -11,7 +11,7 @@
       <form (ngSubmit)="submitForm()" #contactForm="ngForm">
         <!-- name -->
         <div class="field">
-          <label class="label">Name</label>
+          <label class="label">Név</label>
           <input
             type="text"
             name="name"
@@ -19,7 +19,7 @@
             [(ngModel)]="name"
             #nameInput="ngModel"
             required>
-          <div class="help is-error" *ngIf="nameInput.invalid && nameInput.touched">Your name is required.</div>
+          <div class="help is-error" *ngIf="nameInput.invalid && nameInput.touched">A név megadása kötelező.</div>
         </div>
         <div class="field">
           <label class="label">Email</label>
@@ -31,10 +31,10 @@
             #emailInput="ngModel"
             required
             email>
-          <div class="help is-error" *ngIf="emailInput.invalid && emailInput.touched">Your email is required and needs to be an email address.</div>
+          <div class="help is-error" *ngIf="emailInput.invalid && emailInput.touched">Érvényes email cím megadása kötelező.</div>
         </div>
         <div class="field">
-            <label class="label">Your message</label>
+            <label class="label">Üzenet</label>
             <textarea
               name="message"
               class="textarea"
@@ -42,14 +42,14 @@
               #messageInput ="ngModel"
               required>
             </textarea>
-          <div class="help is-error" *ngIf="messageInput.invalid && messageInput.touched">Your message is required.</div>
+          <div class="help is-error" *ngIf="messageInput.invalid && messageInput.touched">Üzenet megadása kötelező.</div>
         </div>
         <div class="field">
           <button
             type="submit"
             class="button is-medium is-warning"
             [disabled]="contactForm.invalid">
-            Send
+            Küldés
           </button>
         </div>
       </form>

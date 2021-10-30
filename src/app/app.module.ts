@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { VideosComponent } from './videos/videos.component';
 
 declare let $: any;
 
@@ -22,7 +23,8 @@ declare let $: any;
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    VideosComponent
   ],
   imports: [
     BrowserModule,
