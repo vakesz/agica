@@ -1,0 +1,17 @@
+<section class="hero is-primary is-bold is-small">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">Videók</h1>
+        </div>
+    </div>
+</section>
+
+<section class="section container has-text-centered">
+  <div *ngFor="let video of videos" class="box has-text-centered videobox"> 
+    <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+      <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="...">
+    </a>
+    <p><a href="https://www.youtube.com/watch?v={{video.id.videoId}}"><strong>{{video.snippet.title}}</strong></a></p>
+    <p>{{video.snippet.description}}</p>
+  </div>
+</section>

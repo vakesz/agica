@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { VideosComponent } from './videos/videos.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { CalendarComponent } from './pages/calendar/calendar.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { VideosComponent } from './pages/videos/videos.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 declare let $: any;
 
@@ -22,6 +24,7 @@ declare let $: any;
     FooterComponent,
     HomeComponent,
     AboutComponent,
+    CalendarComponent,
     ContactComponent,
     PageNotFoundComponent,
     VideosComponent
@@ -29,7 +32,9 @@ declare let $: any;
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
