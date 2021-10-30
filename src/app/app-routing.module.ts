@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { VideosComponent } from './videos/videos.component';
+import { AboutComponent } from './pages/about/about.component';
+import { CalendarComponent } from './pages/calendar/calendar.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { VideosComponent } from './pages/videos/videos.component';
 
 const routes: Routes = [
   {
