@@ -6,17 +6,24 @@ import { Observable } from 'rxjs/internal/Observable';
 @Injectable({
   providedIn: 'root'
 })
-export class CalendarService {
-
+export class GoogleService {
   constructor(public http: HttpClient) { }
 
-  apiKey : string = 'AIzaSyDuRhkMY97JWGzRqXnd6rHVt2x71GWCJuY';
+  apiKey : string = 'AIzaSyBcDpzMK-Hy3lYpifTqPoMb88JH64vxiUE';
 
   getCalendarData(calendarId : string, timeFrom : string) : Observable<Object> {
     let url = 'https://www.googleapis.com/calendar/v3/calendars/' + calendarId + '/events?key=' + this.apiKey + '&orderBy=startTime&timeMin=' + timeFrom;
     return this.http.get<any>(url)
-    .pipe(map((res) => {
-      return res.items;
-    }))
+      .pipe(map((res) => {
+        return res.items;
+      }))
+  }
+
+  getVideosForChanel(channelId: string): Observable<Object> {
+    let url = 'https://www.googleapis.com/youtube/v3/search?key=' + this.apiKey + '&channelId=' + channelId + '&order=date&part=snippet&type=video,id'
+    return this.http.get<any>(url)
+      .pipe(map((res) => {
+        return res.items;
+      }))
   }
 }

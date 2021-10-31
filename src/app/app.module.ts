@@ -13,7 +13,6 @@ import { CalendarComponent } from './pages/calendar/calendar.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { VideosComponent } from './pages/videos/videos.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 declare let $: any;
 
@@ -33,8 +32,7 @@ declare let $: any;
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    NgxSpinnerModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

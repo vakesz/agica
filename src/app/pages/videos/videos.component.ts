@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { takeUntil } from 'rxjs/internal/operators/takeUntil';
 import { Subject } from 'rxjs/internal/Subject';
-import { YoutubeService } from 'src/app/services/youtube.service';
+import { GoogleService } from 'src/app/services/google/google.service';
 
 @Component({
   selector: 'app-videos',
@@ -12,11 +12,11 @@ export class VideosComponent implements OnInit {
   videos!: any;
   private unsubscribe$: Subject<any> = new Subject();
 
-  constructor(private youTubeService: YoutubeService) { }
+  constructor(private googleService: GoogleService) { }
 
   ngOnInit() {
     this.videos = [];
-    this.youTubeService
+    this.googleService
       .getVideosForChanel('UCgTYGjFd27awbt4yRiK_PFQ')
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((data) => {

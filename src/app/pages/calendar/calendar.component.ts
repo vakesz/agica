@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { takeUntil } from 'rxjs/internal/operators/takeUntil';
 import { Subject } from 'rxjs/internal/Subject';
-import { CalendarService } from 'src/app/services/calendar.service';
+import { GoogleService } from 'src/app/services/google/google.service';
 import * as moment from 'moment';
 
 @Component({
@@ -13,11 +13,11 @@ export class CalendarComponent implements OnInit {
   calendarItems!: any;
   private unsubscribe$: Subject<any> = new Subject();
 
-  constructor(private calendarService : CalendarService) { }
+  constructor(private googleService : GoogleService) { }
 
   ngOnInit(): void {  {
     this.calendarItems = [];
-    this.calendarService
+    this.googleService
       .getCalendarData('bgudccobvjdigft93bk4njsvt0@group.calendar.google.com', new Date().toISOString())
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((data) => {
