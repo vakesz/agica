@@ -21,7 +21,6 @@ export class VideosComponent implements OnInit {
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((data) => {
         this.videos = data;
-        console.log(data);
       }); 
     }
 
