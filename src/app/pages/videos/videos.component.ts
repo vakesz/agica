@@ -22,7 +22,9 @@ export class VideosComponent implements OnInit {
       .subscribe((data) => {
         this.videos = data;
         console.log(data);
-      });
+      }); 
     }
+
+    
 
 }

@@ -5,6 +5,14 @@
     background-position: center center;
 }
 
-.videobox {
-    max-width: 400px;
+.columns {
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+    justify-content: center;
+}
+
+.column {
+    height: 300px;
+    width: 400px;
+    margin: 25px 25px 25px 25px;
 }
