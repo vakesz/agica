@@ -7,6 +7,24 @@
 </section>
   
 <section class="section">
-  
-  <div id="calendar"></div>
+  <div *ngFor="let items of calendarItems" id="calendar" class="box">
+    <article class="media">
+      <div class="media-left">
+        <figure class="image is-64x64">
+          <img src="assets/img/r6.webp" alt="Image" *ngIf="items.location == 'R6'">
+          <img src="assets/img/pubg.webp" alt="Image" *ngIf="items.location == 'PUBG'">
+          <img src="assets/img/valorant.webp" alt="Image" *ngIf="items.location == 'VALORANT'">
+          <img src="assets/img/chat.webp" alt="Image" *ngIf="items.location == 'CHAT'">
+        </figure>
+      </div>
+      <div class="content">
+        <p>
+          <strong>{{items.summary}}</strong>&nbsp;<small>{{items.start.dateTime}} - {{items.end.dateTime}}</small>
+        </p>
+        <p>
+          {{items.description}}
+        </p>
+      </div>
+    </article>
+  </div>
 </section>
