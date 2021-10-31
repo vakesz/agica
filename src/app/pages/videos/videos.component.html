@@ -8,8 +8,7 @@
 
 <section>
   <div class="columns is-multiline">
-  <div *ngFor="let video of videos; let i=index" class="has-text-centered"> 
-    <div class="column box">
+    <div *ngFor="let video of videos" class="column box has-text-centered"> 
       <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
         <img [src]="video.snippet.thumbnails.medium.url" alt="...">
       </a>
@@ -17,5 +16,4 @@
       <p>{{video.snippet.description}}</p>
     </div>
   </div>
-</div>
 </section>
