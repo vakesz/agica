@@ -12,7 +12,7 @@ export class GoogleService {
   apiKey : string = 'AIzaSyBcDpzMK-Hy3lYpifTqPoMb88JH64vxiUE';
 
   getCalendarData(calendarId : string, timeFrom : string) : Observable<Object> {
-    let url = 'https://www.googleapis.com/calendar/v3/calendars/' + calendarId + '/events?key=' + this.apiKey + '&orderBy=startTime&timeMin=' + timeFrom;
+    let url = 'https://www.googleapis.com/calendar/v3/calendars/' + calendarId + '/events?key=' + this.apiKey + '&order=startTime&timeMin=' + timeFrom;
     return this.http.get<any>(url)
       .pipe(map((res) => {
         return res.items;

@@ -1,27 +1,18 @@
 .button {
-    background-color: #5865F2 !important;
-    border-color: #5865F2 !important;
-    color: #FFF !important;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    vertical-align: center !important;
-    text-align: center !important;
-  }
-  
-  .button:hover {
-    background-color: #FFF !important;
-    border-color: #000 !important;
-    color: #000 !important;
-  }
-  
-  .navbar-item {
-    text-align: center;
-    align-content: center;
-  }
-  
-  .field {
-    justify-content: center;
-  }
+  background-color: #5865F2 !important;
+  border-color: #5865F2 !important;
+  color: #FFF !important;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
+  vertical-align: center !important;
+  text-align: center !important;
+}
+
+.button:hover {
+  background-color: #FFF !important;
+  border-color: #000 !important;
+  color: #000 !important;
+}
