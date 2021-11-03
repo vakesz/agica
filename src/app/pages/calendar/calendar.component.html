@@ -1,22 +1,17 @@
-<section class="section">
-  <div *ngFor="let items of calendarItems" id="calendar" class="box">
-    <article class="media">
-      <div class="media-left">
-        <figure class="image is-64x64">
-          <img src="assets/img/r6.webp" alt="Image" *ngIf="items.location == 'R6'">
-          <img src="assets/img/pubg.webp" alt="Image" *ngIf="items.location == 'PUBG'">
-          <img src="assets/img/valorant.webp" alt="Image" *ngIf="items.location == 'VALORANT'">
-          <img src="assets/img/chat.webp" alt="Image" *ngIf="items.location == 'CHAT'">
-        </figure>
-      </div>
-      <div class="content">
-        <p>
-          <strong>{{items.summary}}</strong>&nbsp;<small>{{items.start.dateTime}} - {{items.end.dateTime}}</small>
-        </p>
-        <p>
-          {{items.description}}
-        </p>
-      </div>
-    </article>
+<div *ngFor="let items of calendarItems" id="calendar" class="max-w-screen-xl mt-4 px-8 grid grid-cols-3 gap-4 md:px-8 lg:px-8 xl:px-16 py-4 mx-auto bg-gray-50 text-black rounded-lg shadow-lg">
+  <div class="row-span-2 w-20" name="logo">
+    <img src="assets/img/r6.webp" class="w-16 h-16" alt="Rainbow 6 Siege" *ngIf="items.location == 'R6'">
+    <img src="assets/img/pubg.webp" class="w-16 h-16" alt="PUBG" *ngIf="items.location == 'PUBG'">
+    <img src="assets/img/valorant.webp" class="w-16 h-16" alt="VALORANT" *ngIf="items.location == 'VALORANT'">
+    <img src="assets/img/chat.webp" class="w-16 h-16" alt="Just Chatting" *ngIf="items.location == 'CHAT'">
   </div>
-</section>
+  <div class="row-span-2 font-light w-20" name="date">
+    {{items.start.dateTime}} - {{items.end.dateTime}}
+  </div>
+  <div class="font-bold" name="title">
+      {{items.summary}}
+  </div>
+  <div class="font-light" name="description">
+      {{items.description}}
+  </div>
+</div>

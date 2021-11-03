@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { takeUntil } from 'rxjs/internal/operators/takeUntil';
 import { Subject } from 'rxjs/internal/Subject';
 import { GoogleService } from 'src/app/services/google/google.service';
+import * as moment from "moment";
 
 @Component({
   selector: 'app-videos',
@@ -21,9 +22,13 @@ export class VideosComponent implements OnInit {
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((data) => {
         this.videos = data;
-      }); 
+      });
     }
 
-    
+  formatVideoId(): void {
+    for (let i in this.videos) {
+      this.videos[i].id.videoId = 0;
+    }
+  }
 
 }
