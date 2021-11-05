@@ -28,7 +28,7 @@ jobs:
         run: yarn
       - name: "Github Pages Deployment"
         run: |
-          git remote set-url origin https://git:agiicacom@ssh066.webhosting.be:auto.git
+          git remote set-url origin agiicacom@ssh066.webhosting.be:auto.git
           yarn deploy -u "github-actions-bot <support+actions@github.com>"
         if: ${{ github.ref == 'refs/heads/main' }} # only deploy master
         env:
