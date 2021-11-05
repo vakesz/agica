@@ -74,7 +74,7 @@
 
 
 </div>
-<div *ngFor="let items of calendarItems" id="calendar" class="max-w-screen-xl mt-4 px-8 grid grid-cols-3 gap-4 md:px-8 lg:px-8 xl:px-16 py-4 mx-auto bg-gray-50 text-black rounded-lg shadow-lg">
+<div *ngFor="let items of calendarItems;let idx=index;" [ngClass]="{'bg-purple-300 text-white': idx%2==0, 'bg-purple-600 text-white': idx%2!=0}" id="calendar" class="max-w-screen-xl mt-4 px-8 grid grid-cols-3 gap-4 md:px-8 lg:px-8 xl:px-16 py-4 mx-auto rounded-lg shadow-lg">
   <div class="row-span-2 w-20" name="logo">
     <img src="assets/img/r6.webp" class="w-16 h-16" alt="Rainbow 6 Siege" *ngIf="items.location == 'R6'">
     <img src="assets/img/pubg.webp" class="w-16 h-16" alt="PUBG" *ngIf="items.location == 'PUBG'">

@@ -26,6 +26,7 @@ export class VideosComponent implements OnInit {
 
   closeVideo(event:any) {
     let targetCloseModal = document.querySelector('#modal-background');
+    (<HTMLIFrameElement>document.getElementById('iframe')).src = "https://www.youtube.com/embed/";
     this.targetModal?.classList.add('hidden');
   }
 
