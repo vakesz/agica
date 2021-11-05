@@ -1,7 +1,7 @@
 {
   "name": "agica",
   "version": "0.0.0",
-  "homepage": "https://vakesz.github.io/agica",
+  "homepage": "https://agiica.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
