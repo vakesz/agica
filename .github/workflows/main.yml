@@ -28,8 +28,8 @@ jobs:
         run: yarn
       - name: "Github Pages Deployment"
         run: |
-          git remote set-url origin agiicacom@ssh066.webhosting.be:auto.git
-          yarn deploy -u "vakesz <gabor.pinkova@gmail.com>"
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          yarn deploy -u "github-actions-bot <support+actions@github.com>"
         if: ${{ github.ref == 'refs/heads/main' }} # only deploy master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
