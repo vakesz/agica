@@ -9,7 +9,7 @@
     "predeploy": "npm run build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "gh-pages -d dist/agica"
+    "deploy": "gh-pages -d dist/agica -b release"
   },
   "private": true,
   "dependencies": {
