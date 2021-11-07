@@ -11,6 +11,7 @@ import * as moment from 'moment';
 })
 export class CalendarComponent implements OnInit {
   calendarItems!: any;
+  selected!: Date | null;
   private unsubscribe$: Subject<any> = new Subject();
 
   constructor(private googleService : GoogleService) { }

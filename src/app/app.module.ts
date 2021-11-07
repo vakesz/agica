@@ -13,6 +13,8 @@ import { CalendarComponent } from './pages/calendar/calendar.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { VideosComponent } from './pages/videos/videos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 declare let $: any;
 
@@ -32,7 +34,9 @@ declare let $: any;
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
