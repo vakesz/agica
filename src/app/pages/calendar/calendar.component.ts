@@ -2,14 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { takeUntil } from 'rxjs/internal/operators/takeUntil';
 import { Subject } from 'rxjs/internal/Subject';
 import { GoogleService } from 'src/app/services/google/google.service';
-import { setOptions , localeHu } from '@mobiscroll/angular';
 import * as moment from 'moment';
-
-setOptions({
-  locale: localeHu,
-  theme: 'auto',
-  themeVariant: 'light'
-});
 
 @Component({
   selector: 'app-calendar',
@@ -18,6 +11,7 @@ setOptions({
 })
 export class CalendarComponent implements OnInit {
   calendarItems!: any;
+  selected!: Date | null;
   private unsubscribe$: Subject<any> = new Subject();
 
   constructor(private googleService : GoogleService) { }

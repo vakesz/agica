@@ -16,8 +16,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
-import { MbscModule } from '@mobiscroll/angular';
-
 declare let $: any;
 
 @NgModule({
@@ -38,8 +36,7 @@ declare let $: any;
     FormsModule,
     HttpClientModule,
     MatDatepickerModule,
-    MatNativeDateModule,
-    MbscModule
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
