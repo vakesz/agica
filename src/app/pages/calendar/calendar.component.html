@@ -1,95 +1,33 @@
 <div class="max-w-screen-xl mt-4 px-8 md:px-8 lg:px-8 xl:px-16 py-4 mx-auto rounded-lg shadow-lg">
-  <!-- { /*variation dark set*/ } -->
-  <div  class='flex justify-start md:justify-center rounded-lg mx-auto py-4 px-2  md:mx-12'>
-
-    <div class='flex group hover:bg-purple-500 hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all	duration-300	 cursor-pointer justify-center w-16'>
-      <div class='flex items-center px-4 py-4'>
-        <div class='text-center'>
-          <p class='text-gray-900 group-hover:text-gray-100 text-sm transition-all	duration-300'> Sun </p>
-          <p class='text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all	duration-300'> 11 </p>
-        </div>
-      </div>
-    </div>
-
-    <div class='flex group hover:bg-purple-500 hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all	duration-300	 cursor-pointer justify-center  w-16'>
-      <div class='flex items-center px-4 py-4'>
-        <div class='text-center'>
-          <p class='text-gray-900 group-hover:text-gray-100 text-sm transition-all	duration-300'> Mon </p>
-          <p class='text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all	duration-300'> 12 </p>
-        </div>
-      </div>
-    </div>
-
-    <div class='flex group hover:bg-purple-500 hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all	duration-300	 cursor-pointer justify-center  w-16'>
-      <div class='flex items-center px-4 py-4'>
-        <div class='text-center'>
-          <p class='text-gray-900 group-hover:text-gray-100 text-sm transition-all	duration-300'> Tue </p>
-          <p class='text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all	duration-300'> 13</p>
-        </div>
-      </div>
-    </div>
-
-    <div class='flex group bg-purple-600 shadow-lg dark-shadow rounded-lg mx-1 cursor-pointer justify-center relative  w-16'>
-            <span class="flex h-3 w-3 absolute -top-1 -right-1">
-              <span class="animate-ping absolute group-hover:opacity-75 opacity-0 inline-flex h-full w-full rounded-full bg-purple-400 "></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-purple-100"></span>
-            </span>
-      <div class='flex items-center px-4 py-4'>
-        <div class='text-center'>
-          <p class='text-gray-100 text-sm'> Wed </p>
-          <p class='text-gray-100  mt-3 font-bold'> 14 </p>
-        </div>
-      </div>
-    </div>
-
-    <div class='flex group hover:bg-purple-500 hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all	duration-300 cursor-pointer justify-center w-16'>
-      <div class='flex items-center px-4 py-4'>
-        <div class='text-center'>
-          <p class='text-gray-900 group-hover:text-gray-100 text-sm transition-all	duration-300'> Thu </p>
-          <p class='text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all	duration-300'> 15 </p>
-        </div>
-      </div>
-    </div>
-
-    <div class='flex group hover:bg-purple-500 hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all	duration-300	 cursor-pointer justify-center  w-16'>
-      <div class='flex items-center px-4 py-4'>
-        <div class='text-center'>
-          <p class='text-gray-900 group-hover:text-gray-100 text-sm transition-all	duration-300'> Fri </p>
-          <p class='text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all	duration-300'> 16 </p>
-        </div>
-      </div>
-    </div>
-
-    <div class='flex group hover:bg-purple-500 hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all	duration-300	 cursor-pointer justify-center w-16'>
-      <div class='flex items-center px-4 py-4'>
-        <div class='text-center'>
-          <p class='text-gray-900 group-hover:text-gray-100 text-sm transition-all	duration-300'> Sat </p>
-          <p class='text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all	duration-300'> 17 </p>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
 
 
 </div>
 
 
-<div *ngFor="let items of calendarItems;let idx=index;" [ngClass]="{'bg-gray-50': idx%2==0, 'bg-pink-100': idx%2!=0}" id="calendar" class="max-w-screen-xl mt-4 px-8 grid grid-cols-3 gap-4 md:px-8 lg:px-8 xl:px-16 py-4 mx-auto rounded-lg shadow-lg">
-  <div class="row-span-2 w-20" name="logo">
-    <img src="assets/img/r6.webp" class="w-16 h-16" alt="Rainbow 6 Siege" *ngIf="items.location == 'R6'">
-    <img src="assets/img/pubg.webp" class="w-16 h-16" alt="PUBG" *ngIf="items.location == 'PUBG'">
-    <img src="assets/img/valorant.webp" class="w-16 h-16" alt="VALORANT" *ngIf="items.location == 'VALORANT'">
-    <img src="assets/img/chat.webp" class="w-16 h-16" alt="Just Chatting" *ngIf="items.location == 'CHAT'">
+<div *ngFor="let items of calendarItems;let idx=index;" [ngClass]="{'bg-white': idx%2==0, 'bg-pink-100': idx%2!=0}" id="calendar" class="max-w-screen-xl mt-4 px-8 grid grid-cols-4 gap-4 md:px-8 lg:px-8 xl:px-16 py-4 mx-auto rounded-lg shadow-lg">
+  <div class="row-span-2 font-bold w-20 text-center rounded-t self-center" name="date">
+      <div class="bg-red-500 text-white rounded-full py-2 px-6">
+        {{items.start.dateTime.split(' ')[1]}}
+      </div>
+      <div class="pt-1">
+          <span class="text-3xl font-bold">{{items.start.dateTime.split(' ')[2]}}</span>
+      </div>
+      <div class="pb-2 px-2 flex justify-between">
+          <span class="text-xs font-bold">{{items.start.dateTime.split(' ')[3]}}</span>
+          <span class="text-xs font-bold">{{items.start.dateTime.split(' ')[0]}}</span>
+      </div>
   </div>
-  <div class="row-span-2 font-light w-20" name="date">
-    {{items.start.dateTime}} - {{items.end.dateTime}}
+  <div class="col-span-2 px-4" name="title">
+      <p class="font-bold align-middle">{{items.summary}}</p>
+      <p class="font-light align-middle">{{items.start.dateTime.split(' ')[4]}} - {{items.end.dateTime}}</p>
   </div>
-  <div class="font-bold" name="title">
-      {{items.summary}}
+  <div name="logo">
+    <img src="assets/img/r6.webp" class="w-10 h-10 float-right clear-right" alt="Rainbow 6 Siege" *ngIf="items.location == 'R6'">
+    <img src="assets/img/pubg.webp" class="w-10 h-10 float-right clear-right" alt="PUBG" *ngIf="items.location == 'PUBG'">
+    <img src="assets/img/valorant.webp" class="w-10 h-10 float-right clear-right" alt="VALORANT" *ngIf="items.location == 'VALORANT'">
+    <img src="assets/img/chat.webp" class="w-10 h-10 float-right clear-right" alt="Just Chatting" *ngIf="items.location == 'CHAT'">
   </div>
-  <div class="font-light" name="description">
+  <div class="col-span-3 px-4 font-light" name="description">
       {{items.description}}
   </div>
 </div>

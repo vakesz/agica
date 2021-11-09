@@ -6,7 +6,7 @@
 
       <!-- Article -->
       <article class="overflow-hidden rounded-lg shadow-lg">
-          <img (click)="playVideo($event, video)" [src]="video.snippet.thumbnails.medium.url" alt="Thumbnail" class="block h-auto w-full" id="{{video.id.videoId}}">
+          <img (click)="playVideo($event, video)" [src]="video.snippet.thumbnails.medium.url" alt="Thumbnail" class="cursor-pointer block h-auto w-full" id="{{video.id.videoId}}">
         <header class="flex justify-center items-center leading-tight p-2 md:p-4 ">
           <h1 class="text-lg">
             {{video.snippet.title}}

@@ -25,7 +25,7 @@ export class CalendarComponent implements OnInit {
   formatDates(): void {
     moment.locale('HU');
     for (let i in this.calendarItems) {
-      this.calendarItems[i].start.dateTime = moment(this.calendarItems[i].start.dateTime).format("MMM DD.") + ' ' + moment(this.calendarItems[i].start.dateTime).format("HH:mm");
+      this.calendarItems[i].start.dateTime = moment(this.calendarItems[i].start.dateTime).format("YYYY MMM D ddd HH:mm");
       this.calendarItems[i].end.dateTime = moment(this.calendarItems[i].end.dateTime).format("HH:mm");
     }
   }
