@@ -1,8 +1,26 @@
-<div class="max-w-screen-xl mt-4 px-8 md:px-8 lg:px-8 xl:px-16 py-4 mx-auto rounded-lg shadow-lg">
-
-
+<div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+  <div class="flex items-center justify-between flex-wrap">
+    <div class="w-0 flex-1 flex items-center">
+      <p class="ml-3 font-medium truncate">
+        
+        <span class="">
+          Válassz dátumot:
+        </span>
+        <span class="">
+          <input class="bg-gray-100 text-black rounded-lg focus:outline-none focus:shadow-outline" name="email" placeholder="2021 November 4" type="text">
+        </span>
+      </p>
+    </div>
+    <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+      <a href="https://calendar.google.com/calendar/ical/bgudccobvjdigft93bk4njsvt0%40group.calendar.google.com/public/basic.ics" class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-black bg-gray-200 hover:bg-gray-400">
+        <span class="icon">
+          <i class="fa fa-calendar"></i>
+        </span>
+        &nbsp;Naptár felirakozás
+      </a>
+    </div>
+  </div>
 </div>
-
 
 <div *ngFor="let items of calendarItems;let idx=index;" [ngClass]="{'bg-white': idx%2==0, 'bg-pink-100': idx%2!=0}" id="calendar" class="max-w-screen-xl mt-4 px-8 grid grid-cols-4 gap-4 md:px-8 lg:px-8 xl:px-16 py-4 mx-auto rounded-lg shadow-lg">
   <div class="row-span-2 font-bold w-20 text-center rounded-t self-center" name="date">
