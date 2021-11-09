@@ -1,8 +1,11 @@
+// Angular imports
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+// Pages & Services
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -12,10 +15,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { VideosComponent } from './pages/videos/videos.component';
-import { HttpClientModule } from '@angular/common/http';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
 
+// JQuery
 declare let $: any;
 
 @NgModule({
@@ -34,9 +35,7 @@ declare let $: any;
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    MatDatepickerModule,
-    MatNativeDateModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
