@@ -513,6 +513,13 @@
              #nameInput="ngModel"
              required>
     </div>
+    <div class="mt-8">
+      <span class="uppercase text-sm text-gray-600 font-bold">Címzett</span>
+      <select class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" id="recipient">
+        <option value="agiica">Agiica</option>
+        <option value="owner">Fejlesztő</option>
+      </select>
+    </div>
 
     <div class="mt-8">
       <span class="uppercase text-sm text-gray-600 font-bold">Email</span><span class="text-sm text-red-500 font-light" *ngIf="emailInput.invalid && emailInput.touched">&nbsp;-&nbsp;Érvényes email cím megadása kötelező.</span>
