@@ -2,12 +2,13 @@
   <div class="flex items-center justify-between flex-wrap">
     <div class="w-0 flex-1 flex items-center">
       <p class="ml-3 font-medium truncate">
-        
-        <span class="">
-          Válassz dátumot:
-        </span>
-        <span class="">
-          <input class="bg-gray-100 text-black rounded-lg focus:outline-none focus:shadow-outline" name="email" placeholder="2021 November 4" type="text">
+        <span>
+          Időpont: 
+          <mat-form-field appearance="fill">
+            <input matInput [matDatepicker]="picker" [formControl]="date" (dateChange)="getCalendar()">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
         </span>
       </p>
     </div>
@@ -22,7 +23,7 @@
   </div>
 </div>
 
-<div *ngFor="let items of calendarItems;let idx=index;" [ngClass]="{'bg-white': idx%2==0, 'bg-pink-100': idx%2!=0}" id="calendar" class="max-w-screen-xl mt-4 px-8 grid grid-cols-4 gap-4 md:px-8 lg:px-8 xl:px-16 py-4 mx-auto rounded-lg shadow-lg">
+<div *ngFor="let items of calendarItems;let idx=index;trackBy:refreshOnDateChange;" [ngClass]="{'bg-white': idx%2==0, 'bg-pink-100': idx%2!=0}" id="calendar" class="max-w-screen-xl mt-4 px-8 grid grid-cols-4 gap-4 md:px-8 lg:px-8 xl:px-16 py-4 mx-auto rounded-lg shadow-lg">
   <div class="row-span-2 font-bold w-20 text-center rounded-t self-center" name="date">
       <div class="bg-red-500 text-white rounded-full py-2 px-6">
         {{items.start.dateTime.split(' ')[1]}}
