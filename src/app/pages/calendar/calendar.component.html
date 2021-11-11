@@ -41,10 +41,10 @@
       <p class="font-light align-middle">{{items.start.dateTime.split(' ')[4]}} - {{items.end.dateTime}}</p>
   </div>
   <div name="logo">
-    <img src="assets/img/r6.webp" class="w-10 h-10 float-right clear-right" alt="Rainbow 6 Siege" *ngIf="items.location == 'R6'">
-    <img src="assets/img/pubg.webp" class="w-10 h-10 float-right clear-right" alt="PUBG" *ngIf="items.location == 'PUBG'">
-    <img src="assets/img/valorant.webp" class="w-10 h-10 float-right clear-right" alt="VALORANT" *ngIf="items.location == 'VALORANT'">
-    <img src="assets/img/chat.webp" class="w-10 h-10 float-right clear-right" alt="Just Chatting" *ngIf="items.location == 'CHAT'">
+    <img src="assets/img/r6.webp" class="w-10 h-10 float-right clear-right" alt="Rainbow 6 Siege" *ngIf="items.summary.toLowerCase().includes('r6')">
+    <img src="assets/img/pubg.webp" class="w-10 h-10 float-right clear-right" alt="PUBG" *ngIf="items.summary.toLowerCase().includes('pubg')">
+    <img src="assets/img/valorant.webp" class="w-10 h-10 float-right clear-right" alt="VALORANT" *ngIf="items.summary.toLowerCase().includes('valorant')">
+    <img src="assets/img/chat.webp" class="w-10 h-10 float-right clear-right" alt="Just Chatting"  *ngIf="items.summary.toLowerCase().includes('chat')">
   </div>
   <div class="col-span-3 px-4 font-light" name="description">
       {{items.description}}
