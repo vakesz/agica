@@ -9,10 +9,8 @@ import { Observable } from 'rxjs/internal/Observable';
 export class GoogleService {
   constructor(public http: HttpClient) { }
 
-  apiKey : string = 'AIzaSyBcDpzMK-Hy3lYpifTqPoMb88JH64vxiUE';
-
   getCalendarData(calendarId : string, timeFrom : string) : Observable<Object> {
-    let url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${this.apiKey}&timeMin=${timeFrom}&maxResults=5&orderBy=startTime&singleEvents=true`;
+    let url = `https://api.agiica.com/calendar?maxResults=5&orderBy=startTime&singleEvents=true&timeMin=${timeFrom}`;
     return this.http.get<any>(url)
       .pipe(map((res) => {
         return res.items;
@@ -20,7 +18,7 @@ export class GoogleService {
   }
 
   getVideosForChanel(channelId: string): Observable<Object> {
-    let url = `https://www.googleapis.com/youtube/v3/search?key=${this.apiKey}&channelId=${channelId}&order=date&part=snippet&type=video,id`
+    let url = `https://api.agiica.com/youtube?order=date&part=snippet&type=video,id&channelId=${channelId}`
     return this.http.get<any>(url)
       .pipe(map((res) => {
         return res.items;
