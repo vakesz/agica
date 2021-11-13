@@ -505,35 +505,34 @@
       </svg>
     </div>
   </div>
-  <form class="" (ngSubmit)="submitForm()" #contactForm="ngForm">
+  <form [formGroup]="FormData" method="POST" (ngSubmit)="onSubmit(FormData.value)">
     <div>
-      <span class="uppercase text-sm text-gray-600 font-bold">Név</span><span class="text-sm text-red-500 font-light" *ngIf="nameInput.invalid && nameInput.touched">&nbsp;-&nbsp;A név megadása kötelező.</span>
-      <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="name"
-             type="text" placeholder="" [(ngModel)]="name" placeholder="Mekk Elek"
-             #nameInput="ngModel"
+      <span class="uppercase text-sm text-gray-600 font-bold">Név</span>
+      <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="Fullname"
+             type="text" placeholder="Mekk Elek" formControlName="Fullname"
              required>
     </div>
     <div class="mt-8">
       <span class="uppercase text-sm text-gray-600 font-bold">Címzett</span>
-      <select class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" id="recipient">
+      <select formControlName="Recipient" class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="Recipient" id="Recipient">
         <option value="agiica">Agiica</option>
         <option value="owner">Fejlesztő</option>
       </select>
     </div>
 
     <div class="mt-8">
-      <span class="uppercase text-sm text-gray-600 font-bold">Email</span><span class="text-sm text-red-500 font-light" *ngIf="emailInput.invalid && emailInput.touched">&nbsp;-&nbsp;Érvényes email cím megadása kötelező.</span>
-      <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="email" placeholder="mekkelek@futrinka.com"
-             type="text" [(ngModel)]="email" #emailInput="ngModel" required email>
+      <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
+      <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="Email" placeholder="mekkelek@futrinka.com" formControlName="Email"
+             type="text" required email>
     </div>
     <div class="mt-8">
-      <span class="uppercase text-sm text-gray-600 font-bold">Üzenet</span><span class="text-sm text-red-500 font-light" *ngIf="messageInput.invalid && messageInput.touched">&nbsp;-&nbsp;Üzenet megadása kötelező.</span>
-      <textarea name="message" placeholder="Üzeneted..."
-        class="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" [(ngModel)]="message" #messageInput ="ngModel" required></textarea>
+      <span class="uppercase text-sm text-gray-600 font-bold">Üzenet</span>
+      <textarea name="Message" placeholder="Üzeneted..."
+        class="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" formControlName="Message" required></textarea>
     </div>
     <div class="mt-8">
       <button type="submit"
-        class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline disabled:opacity-30" [disabled]="contactForm.invalid">
+        class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline disabled:opacity-30" [disabled]="!FormData.valid">
         Küldés
       </button>
     </div>

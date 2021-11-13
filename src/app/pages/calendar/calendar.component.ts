@@ -23,7 +23,7 @@ export class CalendarComponent implements OnInit {
     let pickedDate = this.date.value.toISOString();
     console.log(pickedDate)
     this.googleService
-    .getCalendarData('bgudccobvjdigft93bk4njsvt0@group.calendar.google.com', pickedDate).subscribe((data) => {
+    .getCalendarData(pickedDate).subscribe((data) => {
       this.calendarItems = data
       this.formatDates();
     })
