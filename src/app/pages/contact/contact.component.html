@@ -505,7 +505,7 @@
       </svg>
     </div>
   </div>
-  <form [formGroup]="FormData" method="POST" (ngSubmit)="onSubmit(FormData.value)">
+  <form class="hidden" [formGroup]="FormData" method="POST" (ngSubmit)="onSubmit(FormData.value)">
     <div>
       <span class="uppercase text-sm text-gray-600 font-bold">Név</span>
       <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="Fullname"
