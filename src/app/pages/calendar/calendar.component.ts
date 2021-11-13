@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { takeUntil } from 'rxjs/internal/operators/takeUntil';
-import { Subject } from 'rxjs/internal/Subject';
 import { GoogleService } from 'src/app/services/google/google.service';
+import { FormControl } from '@angular/forms';
 import * as moment from 'moment';
 
 @Component({
@@ -11,26 +10,34 @@ import * as moment from 'moment';
 })
 export class CalendarComponent implements OnInit {
   calendarItems!: any;
-  private unsubscribe$: Subject<any> = new Subject();
-
+  date = new FormControl(new Date());
+  
   constructor(private googleService : GoogleService) { }
 
-  ngOnInit(): void {  {
+  ngOnInit(): void {  
     this.calendarItems = [];
+    this.getCalendar();
+  }
+
+  getCalendar(): void {
+    let pickedDate = this.date.value.toISOString();
+    console.log(pickedDate)
     this.googleService
-      .getCalendarData('bgudccobvjdigft93bk4njsvt0@group.calendar.google.com', new Date().toISOString())
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe((data) => {
-        this.calendarItems = data;
-        this.formatDates();
-      }); 
+    .getCalendarData(pickedDate).subscribe((data) => {
+      this.calendarItems = data
+      this.formatDates();
+    })
+  }
+  
+  formatDates(): void {
+    moment.locale('HU');
+    for (let i in this.calendarItems) {
+      this.calendarItems[i].start.dateTime = moment(this.calendarItems[i].start.dateTime).format("YYYY MMM D ddd HH:mm");
+      this.calendarItems[i].end.dateTime = moment(this.calendarItems[i].end.dateTime).format("HH:mm");
     }
   }
 
-  formatDates(): void {
-    for (let i in this.calendarItems) {
-      this.calendarItems[i].start.dateTime = moment(this.calendarItems[i].start.dateTime).format("YYYY MMMM DD.") + ' ' + moment(this.calendarItems[i].start.dateTime).format("HH:mm");
-      this.calendarItems[i].end.dateTime = moment(this.calendarItems[i].end.dateTime).format("HH:mm");
-    }
+  refreshOnDateChange(index : Number, date : FormControl) : Date {
+    return date.value;
   }
 }

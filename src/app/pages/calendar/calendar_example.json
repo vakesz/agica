@@ -1,0 +1,187 @@
+[
+    {
+        "kind": "calendar#event",
+        "etag": "\"3269495455282000\"",
+        "id": "5c2224hb3qferc3537tnp22po3",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=NWMyMjI0aGIzcWZlcmMzNTM3dG5wMjJwbzMgYmd1ZGNjb2J2amRpZ2Z0OTNiazRuanN2dDBAZw",
+        "created": "2021-10-20T16:35:27.000Z",
+        "updated": "2021-10-20T16:35:27.641Z",
+        "summary": "Agiica - PUBG Stream",
+        "description": "Playing a few games with my friends. :)",
+        "location": "PUBG",
+        "creator": {
+            "email": "gabor.pinkova@gmail.com"
+        },
+        "organizer": {
+            "email": "bgudccobvjdigft93bk4njsvt0@group.calendar.google.com",
+            "displayName": "Agiica Streams",
+            "self": true
+        },
+        "start": {
+            "dateTime": "jan. 06. 19:00",
+            "timeZone": "Europe/Budapest"
+        },
+        "end": {
+            "dateTime": "05:00",
+            "timeZone": "Europe/Budapest"
+        },
+        "iCalUID": "5c2224hb3qferc3537tnp22po3@google.com",
+        "sequence": 0,
+        "eventType": "default"
+    },
+    {
+        "kind": "calendar#event",
+        "etag": "\"3269495548346000\"",
+        "id": "2ev44bs7npb0nfbi3ntjlim14i",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=MmV2NDRiczducGIwbmZiaTNudGpsaW0xNGkgYmd1ZGNjb2J2amRpZ2Z0OTNiazRuanN2dDBAZw",
+        "created": "2021-10-20T16:36:14.000Z",
+        "updated": "2021-10-20T16:36:14.173Z",
+        "summary": "Agiica - R6 Stream",
+        "description": "Playing a few games with my friends. Maybe some giveaways? ;)",
+        "location": "R6",
+        "creator": {
+            "email": "gabor.pinkova@gmail.com"
+        },
+        "organizer": {
+            "email": "bgudccobvjdigft93bk4njsvt0@group.calendar.google.com",
+            "displayName": "Agiica Streams",
+            "self": true
+        },
+        "start": {
+            "dateTime": "jan. 03. 19:00",
+            "timeZone": "Europe/Budapest"
+        },
+        "end": {
+            "dateTime": "20:00",
+            "timeZone": "Europe/Budapest"
+        },
+        "iCalUID": "2ev44bs7npb0nfbi3ntjlim14i@google.com",
+        "sequence": 0,
+        "eventType": "default"
+    },
+    {
+        "kind": "calendar#event",
+        "etag": "\"3269497405688000\"",
+        "id": "4ie9vfgrj19umqc11oi564qpaj",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=NGllOXZmZ3JqMTl1bXFjMTFvaTU2NHFwYWogYmd1ZGNjb2J2amRpZ2Z0OTNiazRuanN2dDBAZw",
+        "created": "2021-10-20T16:51:42.000Z",
+        "updated": "2021-10-20T16:51:42.844Z",
+        "summary": "Agiica - Valorant Stream",
+        "description": "Lets see if I can finally reach bronze xD",
+        "location": "VALORANT",
+        "creator": {
+            "email": "gabor.pinkova@gmail.com"
+        },
+        "organizer": {
+            "email": "bgudccobvjdigft93bk4njsvt0@group.calendar.google.com",
+            "displayName": "Agiica Streams",
+            "self": true
+        },
+        "start": {
+            "dateTime": "dec. 02. 19:00",
+            "timeZone": "Europe/Budapest"
+        },
+        "end": {
+            "dateTime": "20:00",
+            "timeZone": "Europe/Budapest"
+        },
+        "iCalUID": "4ie9vfgrj19umqc11oi564qpaj@google.com",
+        "sequence": 0,
+        "eventType": "default"
+    },
+    {
+        "kind": "calendar#event",
+        "etag": "\"3269497504542000\"",
+        "id": "5r0vc7netvm9avl8ljetnum23i",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=NXIwdmM3bmV0dm05YXZsOGxqZXRudW0yM2kgYmd1ZGNjb2J2amRpZ2Z0OTNiazRuanN2dDBAZw",
+        "created": "2021-10-20T16:52:32.000Z",
+        "updated": "2021-10-20T16:52:32.271Z",
+        "summary": "Agiica - Just Chatting",
+        "description": "It's time to talk",
+        "location": "CHAT",
+        "creator": {
+            "email": "gabor.pinkova@gmail.com"
+        },
+        "organizer": {
+            "email": "bgudccobvjdigft93bk4njsvt0@group.calendar.google.com",
+            "displayName": "Agiica Streams",
+            "self": true
+        },
+        "start": {
+            "dateTime": "dec. 30. 19:00",
+            "timeZone": "Europe/Budapest"
+        },
+        "end": {
+            "dateTime": "20:00",
+            "timeZone": "Europe/Budapest"
+        },
+        "iCalUID": "5r0vc7netvm9avl8ljetnum23i@google.com",
+        "sequence": 0,
+        "eventType": "default"
+    },
+    {
+        "kind": "calendar#event",
+        "etag": "\"3269497599468000\"",
+        "id": "78b6v16cl0vf70hdpbb59f66fj",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=NzhiNnYxNmNsMHZmNzBoZHBiYjU5ZjY2ZmogYmd1ZGNjb2J2amRpZ2Z0OTNiazRuanN2dDBAZw",
+        "created": "2021-10-20T16:53:19.000Z",
+        "updated": "2021-10-20T16:53:19.734Z",
+        "summary": "Agiica - Just Chatting",
+        "description": "It's time to talk",
+        "location": "CHAT",
+        "creator": {
+            "email": "gabor.pinkova@gmail.com"
+        },
+        "organizer": {
+            "email": "bgudccobvjdigft93bk4njsvt0@group.calendar.google.com",
+            "displayName": "Agiica Streams",
+            "self": true
+        },
+        "start": {
+            "dateTime": "jan. 05. 19:00",
+            "timeZone": "Europe/Budapest"
+        },
+        "end": {
+            "dateTime": "20:00",
+            "timeZone": "Europe/Budapest"
+        },
+        "iCalUID": "78b6v16cl0vf70hdpbb59f66fj@google.com",
+        "sequence": 0,
+        "eventType": "default"
+    },
+    {
+        "kind": "calendar#event",
+        "etag": "\"3269680446466000\"",
+        "id": "7p8jsqd1ju2aepv0ft6vqhi1ma",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=N3A4anNxZDFqdTJhZXB2MGZ0NnZxaGkxbWEgYmd1ZGNjb2J2amRpZ2Z0OTNiazRuanN2dDBAZw",
+        "created": "2021-10-21T18:17:03.000Z",
+        "updated": "2021-10-21T18:17:03.233Z",
+        "summary": "Meeting the Fans!",
+        "description": "Lets goooooooooo",
+        "creator": {
+            "email": "gabor.pinkova@gmail.com"
+        },
+        "organizer": {
+            "email": "bgudccobvjdigft93bk4njsvt0@group.calendar.google.com",
+            "displayName": "Agiica Streams",
+            "self": true
+        },
+        "start": {
+            "dateTime": "jún. 23. 20:30",
+            "timeZone": "Europe/Budapest"
+        },
+        "end": {
+            "dateTime": "21:30",
+            "timeZone": "Europe/Budapest"
+        },
+        "iCalUID": "7p8jsqd1ju2aepv0ft6vqhi1ma@google.com",
+        "sequence": 0,
+        "eventType": "default"
+    }
+]

@@ -1,0 +1,104 @@
+[
+    {
+        "kind": "youtube#searchResult",
+        "etag": "S5GJtgbB1UlpUlzVy6VU-Nknvu0",
+        "id": {
+            "kind": "youtube#video",
+            "videoId": "A4snG7ulcTY"
+        },
+        "snippet": {
+            "publishedAt": "2021-10-27T09:56:22Z",
+            "channelId": "UCgTYGjFd27awbt4yRiK_PFQ",
+            "title": "Agiica - STREAM MONTAGE #2",
+            "description": "Sziasztok! Elkészült a csatorna második montage videója! Ha tetszett a videó, ne felejts el bekövetni twitchen, ahol hetente többször találsz élő adásban!",
+            "thumbnails": {
+                "default": {
+                    "url": "https://i.ytimg.com/vi/A4snG7ulcTY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                },
+                "medium": {
+                    "url": "https://i.ytimg.com/vi/A4snG7ulcTY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                },
+                "high": {
+                    "url": "https://i.ytimg.com/vi/A4snG7ulcTY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                }
+            },
+            "channelTitle": "Twitch Tv Ágiica",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021 október 27"
+        }
+    },
+    {
+        "kind": "youtube#searchResult",
+        "etag": "keXNn5XM5eUoA1_Tsrhn7yVy1TA",
+        "id": {
+            "kind": "youtube#video",
+            "videoId": "_Y_c57aAc80"
+        },
+        "snippet": {
+            "publishedAt": "2021-09-10T21:23:10Z",
+            "channelId": "UCgTYGjFd27awbt4yRiK_PFQ",
+            "title": "Agiica - STREAM MONTAGE #1",
+            "description": "Ha tetszett a csatorna első montage videója ne felejts el bekövetni twitchen! https://www.twitch.tv/agiica.",
+            "thumbnails": {
+                "default": {
+                    "url": "https://i.ytimg.com/vi/_Y_c57aAc80/default.jpg",
+                    "width": 120,
+                    "height": 90
+                },
+                "medium": {
+                    "url": "https://i.ytimg.com/vi/_Y_c57aAc80/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                },
+                "high": {
+                    "url": "https://i.ytimg.com/vi/_Y_c57aAc80/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                }
+            },
+            "channelTitle": "Twitch Tv Ágiica",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021 szeptember 10"
+        }
+    },
+    {
+        "kind": "youtube#searchResult",
+        "etag": "Sx0Yu52xBKc251NcV0tA4Tlt7Dc",
+        "id": {
+            "kind": "youtube#video",
+            "videoId": "8qS2apcm-wk"
+        },
+        "snippet": {
+            "publishedAt": "2021-08-30T22:03:56Z",
+            "channelId": "UCgTYGjFd27awbt4yRiK_PFQ",
+            "title": "Ágica Twitch Intro",
+            "description": "Itt követhetsz élőben: https://www.twitch.tv/agiica.",
+            "thumbnails": {
+                "default": {
+                    "url": "https://i.ytimg.com/vi/8qS2apcm-wk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                },
+                "medium": {
+                    "url": "https://i.ytimg.com/vi/8qS2apcm-wk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                },
+                "high": {
+                    "url": "https://i.ytimg.com/vi/8qS2apcm-wk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                }
+            },
+            "channelTitle": "Twitch Tv Ágiica",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021 augusztus 31"
+        }
+    }
+]

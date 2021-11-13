@@ -1,8 +1,11 @@
+// Angular imports
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+// Pages & Services
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -12,8 +15,16 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { VideosComponent } from './pages/videos/videos.component';
-import { HttpClientModule } from '@angular/common/http';
+import { ContactformService } from './services/contactform/contactform.service';
 
+// Angular Material imports
+import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
+// JQuery
 declare let $: any;
 
 @NgModule({
@@ -32,9 +43,15 @@ declare let $: any;
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [ContactformService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

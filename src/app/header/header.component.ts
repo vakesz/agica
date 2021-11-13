@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+declare var $: any;
 
 @Component({
   selector: 'app-header',
@@ -6,23 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  
-  constructor() { }
+  constructor(private router: Router){}
 
-  ngOnInit(): void {
-    const burgerIcon = document.querySelector('#burger');
-    const navbarMenu = document.querySelector('#nav-links');
-    const menuItem = document.getElementById('#menu-item');
-
-    burgerIcon?.addEventListener('click', () => {
-      navbarMenu?.classList.toggle('is-active');
-      burgerIcon?.classList.toggle('is-active');
-    });
-
-    navbarMenu?.addEventListener('click', () => {
-      navbarMenu?.classList.toggle('is-active');
-      burgerIcon?.classList.toggle('is-active');
-    });
+  routeIsActive(routePath: string) {
+    return this.router.url == routePath;
   }
 
+  ngOnInit(): void {
+    const burger = document.querySelector('#burger');
+    const burgerOpen = document.querySelector('#burger-open');
+    const burgerClose = document.querySelector('#burger-close');
+    const navbarMenu = document.querySelector('#mobile-menu');
+
+    burger?.addEventListener('click', () => {
+      navbarMenu?.classList.toggle('hidden');
+      burgerOpen?.classList.toggle('hidden');
+      burgerClose?.classList.toggle('hidden');
+    });
+  }
 }
