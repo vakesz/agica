@@ -11,21 +11,17 @@ export class GoogleService {
 
   getCalendarData(timeFrom : string) : Observable<Object> {
     let url = `https://api.agiica.com/calendar?maxResults=5&orderBy=startTime&singleEvents=true&timeMin=${timeFrom}`;
-    console.log(url)
     return this.http.get<any>(url)
       .pipe(map((res) => {
-        console.log(res)
         return res.items;
-      }))
+      }));
   }
 
   getVideosForChanel(channelId: string): Observable<Object> {
-    let url = `https://api.agiica.com/youtube?order=date&part=snippet&type=video,id&channelId=${channelId}`
-    console.log(url)
+    let url = `https://api.agiica.com/youtube?order=date&part=snippet&type=video,id&channelId=${channelId}`;
     return this.http.get<any>(url)
       .pipe(map((res) => {
-        console.log(res)
         return res.items;
-      }))
+      }));
   }
 }

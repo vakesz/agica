@@ -21,9 +21,6 @@
 
               <a *ngIf="routeIsActive('/videos')" href="/videos" class="bg-white text-black px-3 py-2 rounded-md text-sm font-medium">Videók</a>
               <a *ngIf="!routeIsActive('/videos')" href="/videos" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Videók</a>
-
-              <a *ngIf="routeIsActive('/contact')" href="/contact" class="bg-white text-black px-3 py-2 rounded-md text-sm font-medium">Kapcsolat</a>
-              <a *ngIf="!routeIsActive('/contact')" href="/contact" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Kapcsolat</a>
             </div>
           </div>
         </div>
@@ -68,9 +65,6 @@
 
         <a *ngIf="routeIsActive('/videos')" href="/videos" class="bg-white text-black block px-3 py-2 rounded-md text-base font-medium text-center" id="menu-item">Videók</a>
         <a *ngIf="!routeIsActive('/videos')" href="/videos" class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium text-center" id="menu-item">Videók</a>
-
-        <a *ngIf="routeIsActive('/contact')" href="/contact" class="bg-white text-black block px-3 py-2 rounded-md text-base font-medium text-center" id="menu-item">Kapcsolat</a>
-        <a *ngIf="!routeIsActive('/contact')" href="/contact" class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium text-center" id="menu-item">Kapcsolat</a>
       </div>
     </div>
   </nav>
@@ -82,7 +76,6 @@
       <h1 class="text-2xl font-bold text-gray-900" *ngIf="routeIsActive('/calendar')">Menetrend</h1>
       <h1 class="text-2xl font-bold text-gray-900" *ngIf="routeIsActive('/videos')">Videók</h1>
       <h1 class="text-2xl font-bold text-gray-900" *ngIf="routeIsActive('/about')">Rólam</h1>
-      <h1 class="text-2xl font-bold text-gray-900" *ngIf="routeIsActive('/contact')">Kapcsolat</h1>
     </div>
   </header>
 </div>
