@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './pages/about/about.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { HomeComponent } from './pages/home/home.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { VideosComponent } from './pages/videos/videos.component';
 
 const routes: Routes = [
@@ -25,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: PageNotFoundComponent
+    component: HomeComponent
   }
 ];
 
