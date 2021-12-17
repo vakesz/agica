@@ -12,7 +12,6 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { VideosComponent } from './pages/videos/videos.component';
 
 // Angular Material imports
@@ -33,7 +32,6 @@ declare let $: any;
     HomeComponent,
     AboutComponent,
     CalendarComponent,
-    PageNotFoundComponent,
     VideosComponent
   ],
   imports: [
