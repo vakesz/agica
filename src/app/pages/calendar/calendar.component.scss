@@ -6,3 +6,15 @@
 .mat-input-element {
     text-align: right !important;
 }
+
+::ng-deep .datepicker .mat-calendar-body-label {
+    display: none;
+}
+
+::ng-deep .datepicker .mat-calendar-abbr {
+    text-decoration: none;
+}
+
+::ng-deep .datepicker .mat-calendar-body-cell-content {
+    border-width: 0px;
+}

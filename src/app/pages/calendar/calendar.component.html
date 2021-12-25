@@ -7,7 +7,7 @@
           <mat-form-field appearance="fill">
             <input matInput [matDatepicker]="picker" [formControl]="date" (dateChange)="getCalendar()">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <mat-datepicker #picker panelClass="datepicker"></mat-datepicker>
           </mat-form-field>
         </span>
       </p>

@@ -7,13 +7,12 @@
       <!-- Article -->
       <article class="overflow-hidden rounded-lg shadow-lg">
           <img (click)="playVideo($event, video)" [src]="video.snippet.thumbnails.medium.url" alt="Thumbnail" class="cursor-pointer block h-auto w-full" id="{{video.id.videoId}}">
-        <header class="flex justify-center items-center leading-tight p-2 md:p-4 ">
-          <h1 class="text-lg">
+        <header class="flex justify-center items-center leading-tight p-2 md:p-2 ">
+          <h1 class="text-lg font-semibold">
             {{video.snippet.title}}
           </h1>
         </header>
-
-        <div class="px-6 py-4 text-center">
+        <div class="px-6 pb-4 text-center">
           <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600 mr-2">{{video.snippet.publishTime}}</span>
         </div>
 

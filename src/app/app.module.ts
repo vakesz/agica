@@ -15,11 +15,12 @@ import { CalendarComponent } from './pages/calendar/calendar.component';
 import { VideosComponent } from './pages/videos/videos.component';
 
 // Angular Material imports
-import { MatNativeDateModule } from '@angular/material/core';
+import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { CustomDateAdapter } from './services/calendar/custom-date-adapter';
 
 // JQuery
 declare let $: any;
@@ -46,7 +47,10 @@ declare let $: any;
     MatFormFieldModule,
     MatInputModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'hu'},
+    {provide: DateAdapter, useClass: CustomDateAdapter }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
